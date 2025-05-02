@@ -250,7 +250,9 @@ button:hover {
 }
 
 
-
+.navigation>a {
+    height: 90%;
+}
 
 .hamburger-links .menu-scroll {
     height: 80px;
@@ -280,7 +282,7 @@ button:hover {
 
 .signature {
     width: auto;
-    height: 90%;
+    height: 100%;
     object-fit: contain;
 }
 
@@ -519,6 +521,9 @@ footer .flex-row {
 
 @media screen and (max-width: 768px) {
 
+    .profile {
+        max-height: 200px;
+    }
 
     #hamburger-links {
         position: absolute;
@@ -540,6 +545,10 @@ footer .flex-row {
         height: 80px;
         z-index: 500;
         gap: 10px;
+    }
+
+    .navigation a {
+        color: white;
     }
 
     #hamburger-menu {

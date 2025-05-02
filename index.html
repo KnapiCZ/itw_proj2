@@ -20,12 +20,15 @@
 </head>
 
 <body>
-    <button class="scroll-to-top" id="scrollToTopBtn" onClick="scrollToHome" title="Go to top">
+    <button class="scroll-to-top" onclick="scrollToHome()" title="Go to top">
+
         <img src="./images/arrow.jpg" alt="arrow to top">
     </button>
     <header id="home">
         <div class="navigation flex-row">
-            <img src="./images/signature.png" alt="Johny Depp Signature" class="signature hover-transform flex-default">
+            <a href="https://johnny-depp-vut.netlify.app/" target="_blank">
+                <img src="./images/signature.png" alt="Johny Depp Signature" class="signature hover-transform">
+            </a>
             <button id="hamburger-menu" class="hidden" onclick="openMenu()"><i class="fa fa-bars"></i></button>
             <menu id="hamburger-links" class="flex-row">
                 <li><a href="#home">Home</a></li>
@@ -38,7 +41,9 @@
         </div>
         <div class="flex-row hero">
             <div class="flex-column hero-text">
-                <h1>Johnny Depp</h1>
+                <a href="https://johnny-depp-vut.netlify.app/" target="_blank">
+                    <h1>Johnny Depp</h1>
+                </a>
                 <p>Actor & Artist & Musician</p>
 
             </div>
