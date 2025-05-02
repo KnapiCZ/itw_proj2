@@ -525,6 +525,10 @@ footer .flex-row {
         max-height: 200px;
     }
 
+    #about {
+        padding-top: 10vh;
+    }
+
     #hamburger-links {
         position: absolute;
         top: 80px;
