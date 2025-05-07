@@ -139,34 +139,21 @@ a:visited {
     display: none;
 }
 
-.animate-right {
+.animate-right,
+.animate-down,
+.animate-left {
     animation-name: fadeInAnimation;
     animation-duration: 0.8s;
-    /* Matches your current transition duration */
     animation-timing-function: ease-out;
-    /* Matches your current timing function */
     animation-fill-mode: forwards;
-    /* Ensures the element stays in the final state */
 }
 
 .animate-left {
     animation-name: fadeLeftAnimation;
-    animation-duration: 0.8s;
-    /* Matches your current transition duration */
-    animation-timing-function: ease-out;
-    /* Matches your current timing function */
-    animation-fill-mode: forwards;
-    /* Ensures the element stays in the final state */
 }
 
 .animate-down {
     animation-name: fadeDownAnimation;
-    animation-duration: 0.8s;
-    /* Matches your current transition duration */
-    animation-timing-function: ease-out;
-    /* Matches your current timing function */
-    animation-fill-mode: forwards;
-    /* Ensures the element stays in the final state */
 }
 
 
