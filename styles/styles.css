@@ -364,24 +364,12 @@ button:hover {
 
 
 
-.film-card:hover {
-    filter: saturate(0);
-}
-
-.film-card:hover.film-card::before {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
 .film-card h3 {
     margin-top: 70%;
     margin-bottom: 300px;
     transition: margin-top var(--transition-time), margin-bottom var(--transition-time-long);
 }
 
-.film-card:hover h3 {
-    margin-top: auto;
-    margin-bottom: 0%;
-}
 
 .film-card>* {
     z-index: 1;
@@ -453,9 +441,6 @@ button:hover {
     transition: height var(--transition-time-long);
 }
 
-.skill-category:hover {
-    height: 50vh;
-}
 
 .skill-category>* {
     flex: 1;
@@ -472,10 +457,6 @@ button:hover {
     transition: color var(--transition-time-long);
 }
 
-.skill-category:hover ul,
-.skill-category:hover .skill-description p {
-    color: var(--primary-color);
-}
 
 .skill-description p {
     max-width: 50%;
@@ -521,6 +502,35 @@ footer .flex-row {
 }
 
 
+@media (hover: hover) {
+
+
+    .film-card:hover {
+        filter: saturate(0);
+    }
+
+    .film-card:hover.film-card::before {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .film-card:hover h3 {
+        margin-top: auto;
+        margin-bottom: 0%;
+    }
+
+    .skill-category:hover {
+        height: 50vh;
+    }
+
+    .skill-category:hover ul,
+    .skill-category:hover .skill-description p {
+        color: var(--primary-color);
+    }
+
+
+}
+
+
 @media screen and (max-width: 768px) {
 
     .profile {
@@ -533,7 +543,9 @@ footer .flex-row {
         padding-top: 10vh;
     }
 
-    .about-text {
+    .about-text,
+    .skill-description p {
+        max-width: none;
         width: auto;
         margin: var(--margin-medium);
     }
@@ -602,16 +614,15 @@ footer .flex-row {
         margin-bottom: 0%;
     }
 
-    .skill-description p {
-        width: 100%;
-        margin: var(--margin-small);
-    }
-
     .skill-category {
         height: auto;
         flex-direction: column;
     }
 
+    ul {
+        padding: var(--margin-medium);
+        margin: 0;
+    }
 
     .skill-category ul,
     .skill-description p {
