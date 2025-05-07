@@ -157,6 +157,7 @@ body {
 }
 
 header {
+    position: relative;
     height: 90vh;
     background-color: var(--background-color);
     text-align: center;
@@ -252,6 +253,7 @@ button:hover {
 
 .navigation>a {
     height: 90%;
+    aspect-ratio: 1;
 }
 
 .hamburger-links .menu-scroll {
@@ -263,7 +265,7 @@ button:hover {
     z-index: 100;
     width: 40px;
     position: fixed;
-    bottom: -200px;
+    bottom: -2000px;
     right: 20px;
     aspect-ratio: 1;
     cursor: pointer;
@@ -283,12 +285,12 @@ button:hover {
 .signature {
     width: auto;
     height: 100%;
+    object-position: center;
     object-fit: contain;
 }
 
 .hero {
-    padding-top: 165px;
-    height: 80%;
+    height: 100%;
     width: 100%;
     justify-content: space-between;
 }
@@ -377,7 +379,7 @@ button:hover {
 }
 
 .film-card:hover h3 {
-    margin-top: 50%;
+    margin-top: auto;
     margin-bottom: 0%;
 }
 
@@ -522,16 +524,23 @@ footer .flex-row {
 @media screen and (max-width: 768px) {
 
     .profile {
-        max-height: 200px;
+        height: auto;
+        aspect-ratio: 3/2;
+        object-position: center;
     }
 
     #about {
         padding-top: 10vh;
     }
 
+    .about-text {
+        width: auto;
+        margin: var(--margin-medium);
+    }
+
     #hamburger-links {
         position: absolute;
-        top: 80px;
+        top: 60px;
         left: -90vh;
         width: 100vw;
         flex-direction: column;
@@ -561,7 +570,7 @@ footer .flex-row {
     }
 
     .signature {
-        height: 60%;
+        height: 100%;
     }
 
     .hero,
@@ -575,7 +584,13 @@ footer .flex-row {
 
 
     .film-card {
-        filter: saturate(0);
+        filter: saturate(0.5);
+        aspect-ratio: 2/4;
+    }
+
+    .film-card.flex-column {
+        justify-content: space-between;
+
     }
 
     .film-card::before {
@@ -583,7 +598,7 @@ footer .flex-row {
     }
 
     .film-card h3 {
-        margin-top: 50%;
+        margin-top: 10%;
         margin-bottom: 0%;
     }
 
