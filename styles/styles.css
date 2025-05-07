@@ -10,7 +10,7 @@
     --background-light-color: #f0f0f0;
     --heading-font: "Oswald", sans-serif;
     --body-font: "Zen Kaku Gothic Antique", sans-serif;
-    --transition-time: 0.3s;
+    --transition-time: 0.5s;
     --transition-time-long: 0.5s;
     --margin-small: 8px;
     --margin-medium: 16px;
@@ -106,8 +106,8 @@ a:visited {
 
 .hover-transform {
     transition:
-        transform var(--transition-time),
-        filter var(--transition-time);
+        transform var(--transition-time) ease-in-out,
+        filter var(--transition-time) ease-in-out;
 }
 
 .hover-transform:hover {
@@ -124,7 +124,7 @@ a:visited {
     position: absolute;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    transition: background-color var(--transition-time);
+    transition: background-color var(--transition-time) ease-in-out;
 }
 
 .background-overlay:hover.background-overlay::before {
@@ -138,6 +138,37 @@ a:visited {
 .hidden {
     display: none;
 }
+
+.animate-right {
+    animation-name: fadeInAnimation;
+    animation-duration: 0.8s;
+    /* Matches your current transition duration */
+    animation-timing-function: ease-out;
+    /* Matches your current timing function */
+    animation-fill-mode: forwards;
+    /* Ensures the element stays in the final state */
+}
+
+.animate-left {
+    animation-name: fadeLeftAnimation;
+    animation-duration: 0.8s;
+    /* Matches your current transition duration */
+    animation-timing-function: ease-out;
+    /* Matches your current timing function */
+    animation-fill-mode: forwards;
+    /* Ensures the element stays in the final state */
+}
+
+.animate-down {
+    animation-name: fadeDownAnimation;
+    animation-duration: 0.8s;
+    /* Matches your current transition duration */
+    animation-timing-function: ease-out;
+    /* Matches your current timing function */
+    animation-fill-mode: forwards;
+    /* Ensures the element stays in the final state */
+}
+
 
 /******************************* */
 /*       Global CSS Styles       */
@@ -208,8 +239,8 @@ button {
     font-size: 1.2rem;
     cursor: pointer;
     transition:
-        background-color var(--transition-time),
-        color var(--transition-time);
+        background-color var(--transition-time) ease-in-out,
+        color var(--transition-time) ease-in-out;
 }
 
 button:hover {
@@ -247,7 +278,7 @@ button:hover {
     margin: 0;
     padding: 0 50px;
     background-color: white;
-    transition: height var(--transition-time);
+    transition: height var(--transition-time) ease-in-out;
 }
 
 
@@ -274,7 +305,7 @@ button:hover {
     overflow: hidden;
     object-fit: fill;
     border: 2px solid black;
-    transition: bottom var(--transition-time);
+    transition: bottom var(--transition-time) ease-in-out;
     padding: 0;
 }
 
@@ -340,7 +371,7 @@ button:hover {
 }
 
 .film-card.flex-column {
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -359,7 +390,7 @@ button:hover {
     position: absolute;
     inset: 0;
     background-image: linear-gradient(to bottom, black rgba(0, 0, 0, 0.4));
-    transition: background-color var(--transition-time);
+    transition: background-color var(--transition-time) ease-in-out;
 }
 
 
@@ -367,7 +398,7 @@ button:hover {
 .film-card h3 {
     margin-top: 70%;
     margin-bottom: 300px;
-    transition: margin-top var(--transition-time), margin-bottom var(--transition-time-long);
+    transition: margin-top var(--transition-time) ease-in-out, margin-bottom var(--transition-time-long) ease-in-out;
 }
 
 
@@ -438,7 +469,7 @@ button:hover {
     justify-content: center;
     background-size: cover;
     background-position: center;
-    transition: height var(--transition-time-long);
+    transition: height var(--transition-time-long) ease-in-out;
 }
 
 
@@ -454,7 +485,7 @@ button:hover {
 .skill-description p {
     flex: 1;
     color: transparent;
-    transition: color var(--transition-time-long);
+    transition: color var(--transition-time-long) ease-in-out;
 }
 
 
@@ -514,7 +545,7 @@ footer .flex-row {
     }
 
     .film-card:hover h3 {
-        margin-top: auto;
+        margin-top: 10%;
         margin-bottom: 0%;
     }
 
@@ -560,7 +591,7 @@ footer .flex-row {
         left: -90vh;
         width: 100vw;
         flex-direction: column;
-        transition: left var(--transition-time);
+        transition: left var(--transition-time) ease-in-out;
         background: black;
         z-index: 0;
         padding: 0;
@@ -639,5 +670,41 @@ footer .flex-row {
 
     footer .flex-row {
         flex-direction: column;
+    }
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(10%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeLeftAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-10%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeDownAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
